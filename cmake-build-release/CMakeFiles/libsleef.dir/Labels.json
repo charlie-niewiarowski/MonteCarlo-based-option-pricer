@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/CMakeFiles/libsleef"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/CMakeFiles/libsleef.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/CMakeFiles/libsleef-complete.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-stamp/libsleef-build.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-stamp/libsleef-configure.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-stamp/libsleef-download.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-stamp/libsleef-install.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-stamp/libsleef-mkdir.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-stamp/libsleef-patch.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-stamp/libsleef-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"libsleef"
+		],
+		"name" : "libsleef"
+	}
+}

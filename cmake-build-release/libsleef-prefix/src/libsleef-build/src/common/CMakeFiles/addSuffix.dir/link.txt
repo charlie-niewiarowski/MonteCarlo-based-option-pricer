@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wno-unused-function -Wno-attributes -Wno-unused-result -Wno-psabi -ffp-contract=off -fvisibility=hidden -O3 -DNDEBUG CMakeFiles/addSuffix.dir/addSuffix.c.o -o ../../bin/addSuffix   -L/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/contrib/lib 

@@ -1,0 +1,40 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-build/CMakeFiles/ext_tlfloat"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-build/CMakeFiles/ext_tlfloat.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-build/CMakeFiles/ext_tlfloat-complete.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-build/ext_tlfloat-prefix/src/ext_tlfloat-stamp/ext_tlfloat-build.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-build/ext_tlfloat-prefix/src/ext_tlfloat-stamp/ext_tlfloat-configure.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-build/ext_tlfloat-prefix/src/ext_tlfloat-stamp/ext_tlfloat-download.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-build/ext_tlfloat-prefix/src/ext_tlfloat-stamp/ext_tlfloat-install.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-build/ext_tlfloat-prefix/src/ext_tlfloat-stamp/ext_tlfloat-mkdir.rule"
+		},
+		{
+			"file" : "/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/libsleef-prefix/src/libsleef-build/ext_tlfloat-prefix/src/ext_tlfloat-stamp/ext_tlfloat-patch.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"ext_tlfloat"
+		],
+		"name" : "ext_tlfloat"
+	}
+}

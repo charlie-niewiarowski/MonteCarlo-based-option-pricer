@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libtlfloat.a CMakeFiles/tlfloat.dir/printf.cpp.o CMakeFiles/tlfloat_inline.dir/arith.cpp.o CMakeFiles/tlfloat_inline.dir/misc.cpp.o CMakeFiles/tlfloat_inline.dir/trig.cpp.o CMakeFiles/tlfloat_inline.dir/logexp.cpp.o CMakeFiles/tlfloat_inline.dir/invtrig.cpp.o CMakeFiles/tlfloat_inline.dir/hyp.cpp.o CMakeFiles/tlfloat_inline.dir/erfgamma.cpp.o
+/usr/bin/ranlib ../../lib/libtlfloat.a
