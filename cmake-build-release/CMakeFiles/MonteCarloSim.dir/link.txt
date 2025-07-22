@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/MonteCarloSim.dir/main.cpp.o CMakeFiles/MonteCarloSim.dir/lib/Timer.cpp.o CMakeFiles/MonteCarloSim.dir/montecarlo.cpp.o -o MonteCarloSim   -L/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/contrib/lib  -Wl,-rpath,/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/contrib/lib -lsleef 

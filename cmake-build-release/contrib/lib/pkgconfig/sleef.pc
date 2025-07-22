@@ -1,9 +1,0 @@
-prefix=/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/contrib
-libdir=/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/contrib/lib
-includedir=/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/contrib/include
-
-Name: SLEEF
-Description: SIMD Library for Evaluating Elementary Functions, vectorized libm and DFT
-Version: 4.0.0
-Cflags: -I${includedir}
-Libs: -L${libdir} -lsleef

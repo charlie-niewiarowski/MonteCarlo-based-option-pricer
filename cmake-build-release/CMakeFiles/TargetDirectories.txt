@@ -1,4 +1,0 @@
-/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/CMakeFiles/libsleef.dir
-/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/CMakeFiles/MonteCarloSim.dir
-/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/CMakeFiles/edit_cache.dir
-/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/CMakeFiles/rebuild_cache.dir

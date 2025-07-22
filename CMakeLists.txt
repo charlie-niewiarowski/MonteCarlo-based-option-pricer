@@ -41,4 +41,4 @@ add_executable(MonteCarloSim
 add_dependencies(MonteCarloSim libsleef)
 
 # Link against SLEEF
-target_link_libraries(MonteCarloSim PRIVATE sleef)
+target_link_libraries(MonteCarloSim sleef)

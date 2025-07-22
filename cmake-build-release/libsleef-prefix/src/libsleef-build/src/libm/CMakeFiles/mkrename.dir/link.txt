@@ -1,1 +1,0 @@
-/usr/bin/cc  -Wall -Wno-unused-function -Wno-attributes -Wno-unused-result -Wno-psabi -ffp-contract=off -fvisibility=hidden -O3 -DNDEBUG CMakeFiles/mkrename.dir/mkrename.c.o -o ../../bin/mkrename   -L/home/cniew/CLionProjects/MonteCarloSim/cmake-build-release/contrib/lib 
