@@ -3,14 +3,30 @@
 #include "montecarlo.h"
 #include "../lib/Timer.h"
 
-int main() {
+int main(int argc, char* argv[]) {
+    std::cout << argc << std::endl;
     // Option parameters
-    double S0 = 213.76;   // Initial stock price
-    double K = 100.0;    // Strike price
-    double r = 0.04306;     // Risk-free rate
-    double sigma = 0.3172;  // Volatility
-    double T = 1;      // Time to maturity (1 year)
-    int numSimulations = 100000000; // Number of simulations
+    if (argc != 7) { // Program name + 6 args expected
+        std::cerr << "Usage: " << argv[0] << " S0 K r sigma T numSimulations\n";
+        return 1;
+    }
+    double S0; double K; double r; double sigma; double T; int numSimulations;
+    try {
+        S0 = std::stod(argv[1]);              // Initial stock price
+        K = std::stod(argv[2]);               // Strike price
+        r = std::stod(argv[3]);               // Risk-free rate
+        sigma = std::stod(argv[4]);           // Volatility
+        T = std::stod(argv[5]);               // Time to maturity
+        numSimulations = std::stoi(argv[6]);    // Number of simulations
+
+
+        // Now you can use these variables in your Monte Carlo pricer...
+
+    } catch (const std::exception& e) {
+        std::cerr << "Error parsing arguments: " << e.what() << "\n";
+        return 1;
+    }
+
 
     // Calculate option prices
     double callPrice = 0;

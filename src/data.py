@@ -1,6 +1,7 @@
 import requests
 import yfinance as yf
-import pandas as pd
+import subprocess
+import os
 
 APCA_KEY = 'PKF1N57C1HHP6NJ5ZTBE'
 APCA_SECRET = 'slUbRcJRfWST4jS7NfLI6Uf1NqCpeHQD3feeE190'
@@ -11,18 +12,16 @@ headers = {
     'APCA-API-SECRET-KEY': APCA_SECRET
 }
 
-symbol = 'AAPL'
+symbol = input("Symbol: ")
 bars_url = f'https://data.alpaca.markets/v2/stocks/{symbol}/bars'
 params = {'timeframe': '1Day', 'limit': 1}
 
 ticker = yf.Ticker("AAPL")
 hist = ticker.history(period="1y")['Close']
 volatility = hist.pct_change().std() * (252 ** 0.5)  # annualized
-print(f"Annualized historical volatility: {volatility:.2%}")
 
 response = requests.get(bars_url, headers=headers, params=params)
 initial_stock_price = response.json()['bars'][0]['c']  # closing price
-print(f"{symbol} latest close price: ${initial_stock_price}")
 
 
 url = "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/avg_interest_rates"
@@ -33,5 +32,18 @@ params = {
 }
 resp = requests.get(url, params=params)
 rf_interest_rate = resp.json()["data"][-1].get('avg_interest_rate_amt')
-print(rf_interest_rate)
+
+strike = input(f"Strike (latest close was {initial_stock_price}): ")
+ttm = input("Time to Maturity (Years): ")
+numSims = input("Num Simulations: ")
+args = list(map(str, [initial_stock_price, strike, rf_interest_rate, volatility, ttm, numSims]))
+
+result = subprocess.run(
+    ['cmake-build-release/MonteCarloSim'] + args,
+    capture_output=True,
+    text=True)
+
+print("Program output:")
+print(result.stdout)
+print("Exit code:", result.returncode)
 
