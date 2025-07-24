@@ -30,11 +30,11 @@ link_directories(${CMAKE_BINARY_DIR}/contrib/lib)
 
 # Main target
 add_executable(MonteCarloSim
-        main.cpp
+        src/main.cpp
         lib/Timer.cpp
         lib/Timer.h
-        montecarlo.cpp
-        montecarlo.h
+        src/montecarlo.cpp
+        src/montecarlo.h
 )
 
 # Ensure SLEEF builds before your executable
