@@ -33,20 +33,22 @@ High-performance, SIMD-accelerated Monte Carlo simulation engine for pricing Eur
 │ └── Xoshiro256PlusSIMD/ # SIMD random number generator (Xoshiro256+)
 ## How to Use
 
-**Prerequisites:** CMake, GCC/Clang with AVX2 support, Python3, pip
+###Prerequisites: 
 
-**Build**
-- git clone https://github.com/yourusername/MonteCarloSim.git
-- cd MonteCarloSim
-- mkdir cmake-build-release
-- cd cmake-build-release
-- cmake ..
-- make
+CMake, GCC/Clang with AVX2 support, Python3, pip
 
-**Running the Simulation**
-- python3 data.py
+### Build
+git clone https://github.com/charlie-niewiarowski/MonteCarloSim.git
+cd MonteCarloSim
+mkdir cmake-build-release
+cd cmake-build-release
+cmake ..
+make
 
-**Sample Output**
+### Running the Simulation
+python3 data.py
+
+### Sample Output
 Call Statistics:
 
 Average Time Per 1000000 Simulations: 10.52ms
@@ -54,7 +56,6 @@ Average Time Per 1000000 Simulations: 10.52ms
 Avg Call Price: 15.67
 
 Standard Error: 0.0342
-
 
 Put Statistics:
 
