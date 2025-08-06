@@ -21,15 +21,16 @@ High-performance, SIMD-accelerated Monte Carlo simulation engine for pricing Eur
     - Average time to calculate the price
 
 # Project Structure
-├── data.py               # Python script for data ingestion & CLI interface
-├── cmake-build-release/  # C++ compiled binaries
-├── montecarlo.h          # Monte Carlo pricer header
-├── montecarlo.cpp        # SIMD-accelerated Monte Carlo implementation
-├── main.cpp              # Entry point, argument parsing & result output
-├── lib/
-│   ├── Timer.h           # Lightweight benchmarking timer
-│   └── Xoshiro256PlusSIMD/  # SIMD random number generator (Xoshiro256+)
 
+.
+├── data.py # Python script for data ingestion & CLI interface
+├── cmake-build-release/ # C++ compiled binaries
+├── montecarlo.h # Monte Carlo pricer header
+├── montecarlo.cpp # SIMD-accelerated Monte Carlo implementation
+├── main.cpp # Entry point, argument parsing & result output
+├── lib/
+│ ├── Timer.h # Lightweight benchmarking timer
+│ └── Xoshiro256PlusSIMD/ # SIMD random number generator (Xoshiro256+)
 ## How to Use
 
 **Prerequisites:** CMake, GCC/Clang with AVX2 support, Python3, pip
@@ -43,17 +44,24 @@ High-performance, SIMD-accelerated Monte Carlo simulation engine for pricing Eur
 - make
 
 **Running the Simulation**
-python3 data.py
+- python3 data.py
 
 **Sample Output**
 Call Statistics:
+
 Average Time Per 1000000 Simulations: 10.52ms
+
 Avg Call Price: 15.67
+
 Standard Error: 0.0342
 
+
 Put Statistics:
+
 Average Time Per 1000000 Simulations: 10.76ms
+
 Avg Put Price: 12.13
+
 Standard Error: 0.0318
 
 ## License
