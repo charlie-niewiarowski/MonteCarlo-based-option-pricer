@@ -1,7 +1,7 @@
-Monte Carlo Options Pricing Engine
+# Monte Carlo Options Pricing Engine
 High-performance, SIMD-accelerated Monte Carlo simulation engine for pricing European call and put options. Optimized for speed and accuracy with AVX2 vectorization, multithreading, and real-time market data ingestion.
 
-Features
+# Features
 Real-Time Market Data Integration
 
 Fetches live stock prices from Alpaca and Yahoo Finance.
@@ -30,7 +30,7 @@ Seamless Python Integration
 
 Python script (data.py) automates market data retrieval and interfaces with the C++ engine.
 
-Project Structure
+# Project Structure
 bash
 Copy
 Edit
@@ -56,11 +56,11 @@ Accuracy and statistical rigor: Benchmarking modules calculate error margins and
 
 The author has applied similar systems-level optimizations across projects like a custom HTTP server in C, Python-based web scrapers processing over 30,000 items in seconds, and Neo4j-based real-time balance tracking systems. These experiences culminate in an engineering mindset focused on performance, modularity, and practical deployment.
 
-Build Instructions
+## Build Instructions
 bash
 Copy
 Edit
-# Prerequisites: CMake, GCC/Clang with AVX2 support, Python3, pip
+**Prerequisites: CMake, GCC/Clang with AVX2 support, Python3, pip**
 git clone https://github.com/yourusername/MonteCarloSim.git
 cd MonteCarloSim
 mkdir cmake-build-release
@@ -72,8 +72,8 @@ bash
 Copy
 Edit
 python3 data.py
-# You will be prompted for:
-# Symbol, Strike, Time to Maturity, Number of Simulations
+**You will be prompted for:**
+**Symbol, Strike, Time to Maturity, Number of Simulations**
 Sample Output
 yaml
 Copy
@@ -96,10 +96,10 @@ Extend to American options using Longstaff-Schwartz algorithm.
 
 Python C-extension interface for seamless integration in quant research workflows.
 
-License
+## License
 MIT License
 
-References
+## References
 Alpaca API Documentation
 
 SLEEF Library
