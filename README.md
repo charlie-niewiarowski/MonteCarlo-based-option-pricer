@@ -2,10 +2,10 @@
 High-performance, SIMD-accelerated Monte Carlo simulation engine for pricing European call and put options. Optimized for speed and accuracy with AVX2 vectorization, multithreading, and real-time market data ingestion.
 
 # Features
-- **Integrates real-time data**,
+## Integrates Real-Time Data
   - fetching live stock prices from Alpaca and Yahoo Finance. Retrieves up-to-date risk-free rates from the U.S. Treasury API.
 
-- **Monte Carlo Sim Pricing Class**
+## Monte Carlo Pricing Class
   - The constructor for this class takes in an option's
     - Initial stock price
     - Strick price
@@ -20,30 +20,25 @@ High-performance, SIMD-accelerated Monte Carlo simulation engine for pricing Eur
     - Standard error for calls and puts
     - Average time to calculate the price
 
-# Project Structure
+# How to Use
 
-.
-├── data.py # Python script for data ingestion & CLI interface
-├── cmake-build-release/ # C++ compiled binaries
-├── montecarlo.h # Monte Carlo pricer header
-├── montecarlo.cpp # SIMD-accelerated Monte Carlo implementation
-├── main.cpp # Entry point, argument parsing & result output
-├── lib/
-│ ├── Timer.h # Lightweight benchmarking timer
-│ └── Xoshiro256PlusSIMD/ # SIMD random number generator (Xoshiro256+)
-## How to Use
-
-###Prerequisites: 
+## Prerequisites: 
 
 CMake, GCC/Clang with AVX2 support, Python3, pip
 
 ### Build
-git clone https://github.com/charlie-niewiarowski/MonteCarloSim.git
+git clone https://github.com/charlie-niewiarowski/MonteCarlo-based-option-pricer
+
 cd MonteCarloSim
+
 mkdir cmake-build-release
+
 cd cmake-build-release
+
 cmake ..
+
 make
+
 
 ### Running the Simulation
 python3 data.py
@@ -56,6 +51,7 @@ Average Time Per 1000000 Simulations: 10.52ms
 Avg Call Price: 15.67
 
 Standard Error: 0.0342
+
 
 Put Statistics:
 
