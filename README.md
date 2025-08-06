@@ -2,39 +2,25 @@
 High-performance, SIMD-accelerated Monte Carlo simulation engine for pricing European call and put options. Optimized for speed and accuracy with AVX2 vectorization, multithreading, and real-time market data ingestion.
 
 # Features
-Real-Time Market Data Integration
+- **Integrates real-time data**,
+  - fetching live stock prices from Alpaca and Yahoo Finance. Retrieves up-to-date risk-free rates from the U.S. Treasury API.
 
-Fetches live stock prices from Alpaca and Yahoo Finance.
-
-Retrieves up-to-date risk-free rates from the U.S. Treasury API.
-
-SIMD-Optimized Pricing Engine
-
-Utilizes AVX2 intrinsics for vectorized Monte Carlo paths.
-
-Custom Box-Muller Gaussian generator with SIMD support.
-
-Multithreaded Execution
-
-Dynamically scales to hardware concurrency.
-
-Cache-friendly data structures for parallel execution.
-
-Benchmarking and Error Metrics
-
-Compute average option prices across N iterations.
-
-Tracks standard errors and per-iteration latencies.
-
-Seamless Python Integration
-
-Python script (data.py) automates market data retrieval and interfaces with the C++ engine.
+- **Monte Carlo Sim Pricing Class**
+  - The constructor for this class takes in an option's
+    - Initial stock price
+    - Strick price
+    - Risk-free interest rate
+    - Standard deviation
+    - Time to maturity
+    - Number of simulations you want to run per pricing calculation
+  - Utility functions
+    - Functions for pricing call and put options (runs the number of simulations specified in the constructor)
+    - Functions to get an average on the sims calculations (runs pricing call/put options N amount of times for a total of N * number of simulations)
+  - Benchmarking functions
+    - Standard error for calls and puts
+    - Average time to calculate the price
 
 # Project Structure
-bash
-Copy
-Edit
-.
 ├── data.py               # Python script for data ingestion & CLI interface
 ├── cmake-build-release/  # C++ compiled binaries
 ├── montecarlo.h          # Monte Carlo pricer header
@@ -43,41 +29,23 @@ Edit
 ├── lib/
 │   ├── Timer.h           # Lightweight benchmarking timer
 │   └── Xoshiro256PlusSIMD/  # SIMD random number generator (Xoshiro256+)
-Why You Should Use This
-At high-frequency trading firms, performance is everything. This engine was built with quantitative development in mind, optimized down to the instruction level:
 
-Ultra-fast simulation: Leveraging AVX2 SIMD intrinsics and multithreading to process billions of paths within milliseconds.
+## How to Use
 
-Low-level systems optimization: Implements custom SIMD math routines (Box-Muller transform, exponential/logarithms) to bypass typical library bottlenecks.
+**Prerequisites:** CMake, GCC/Clang with AVX2 support, Python3, pip
 
-Practical for real traders: Integrated live data pipelines (Alpaca, Yahoo Finance, US Treasury) to ensure this is built for real market conditions, not toy models.
+**Build**
+- git clone https://github.com/yourusername/MonteCarloSim.git
+- cd MonteCarloSim
+- mkdir cmake-build-release
+- cd cmake-build-release
+- cmake ..
+- make
 
-Accuracy and statistical rigor: Benchmarking modules calculate error margins and per-simulation latency, ensuring statistical convergence isn’t sacrificed for speed.
-
-The author has applied similar systems-level optimizations across projects like a custom HTTP server in C, Python-based web scrapers processing over 30,000 items in seconds, and Neo4j-based real-time balance tracking systems. These experiences culminate in an engineering mindset focused on performance, modularity, and practical deployment.
-
-## Build Instructions
-bash
-Copy
-Edit
-**Prerequisites: CMake, GCC/Clang with AVX2 support, Python3, pip**
-git clone https://github.com/yourusername/MonteCarloSim.git
-cd MonteCarloSim
-mkdir cmake-build-release
-cd cmake-build-release
-cmake ..
-make
-Running the Simulation
-bash
-Copy
-Edit
+**Running the Simulation**
 python3 data.py
-**You will be prompted for:**
-**Symbol, Strike, Time to Maturity, Number of Simulations**
-Sample Output
-yaml
-Copy
-Edit
+
+**Sample Output**
 Call Statistics:
 Average Time Per 1000000 Simulations: 10.52ms
 Avg Call Price: 15.67
@@ -87,14 +55,6 @@ Put Statistics:
 Average Time Per 1000000 Simulations: 10.76ms
 Avg Put Price: 12.13
 Standard Error: 0.0318
-Future Work
-AVX-512 support for newer architectures.
-
-Custom SIMD math library to replace external dependencies.
-
-Extend to American options using Longstaff-Schwartz algorithm.
-
-Python C-extension interface for seamless integration in quant research workflows.
 
 ## License
 MIT License
